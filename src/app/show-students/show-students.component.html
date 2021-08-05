@@ -1,0 +1,49 @@
+<div style="margin-top: 2em">
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="name" required>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Age</mat-label>
+    <input matInput [formControl]="age" required>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Sort</mat-label>
+    <input matInput [formControl]="sort" required>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Offset</mat-label>
+    <input matInput [formControl]="offset" required>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Limit</mat-label>
+    <input matInput [formControl]="limit" required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" style="margin-left: 2em"
+          (click)="save()">{{'SEARCH'}}
+  </button>
+</div>
+<h1 style="margin-left: 2em"> Student List</h1>
+<mat-list role="list">
+  <mat-list-item style="margin-top: 2em;margin-bottom: 2em" *ngFor="let student of students">
+    <mat-card>
+      <mat-form-field color="primary" appearance="standard">
+        <mat-label>Student Id</mat-label>
+        <input matInput [value]="student.id">
+      </mat-form-field>
+      <mat-form-field color="primary" appearance="standard">
+        <mat-label>Student Name</mat-label>
+        <input matInput [value]="student.name">
+      </mat-form-field>
+      <mat-form-field color="primary" appearance="standard">
+        <mat-label>Student Age</mat-label>
+        <input matInput [value]="student.age">
+      </mat-form-field>
+      <mat-form-field color="primary" appearance="standard">
+        <mat-label>Student Email</mat-label>
+        <input matInput [value]="student.email">
+      </mat-form-field>
+
+    </mat-card>
+  </mat-list-item>
+</mat-list>

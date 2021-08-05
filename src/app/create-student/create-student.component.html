@@ -1,0 +1,21 @@
+<div style="margin-top: 2em">
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>ID</mat-label>
+    <input matInput [formControl]="id" required>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="name" required>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Age</mat-label>
+    <input matInput [formControl]="age" required>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="standard" style="margin-left: 2em">
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="email" required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" style="margin-left: 2em"
+          (click)="save()">{{'SAVE'}}
+  </button>
+</div>
